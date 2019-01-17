@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AP9 FM</string>
+    <string name="screen_title">AP9 FM RADIO</string>
+    <string name="banner_ad_test_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner_ad_frnd_unit_id">ca-app-pub-9440947005851636/7518790701</string>
+    <string name="network_error">Please check your Internet connection or try again later.</string>
+</resources>

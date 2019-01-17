@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.versatilemobitech.ap9fm"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 3
+        versionName "1.0.2"
+    }
+
+    signingConfigs {
+        mySignature {
+            storeFile file('rg9fmradio_key')
+            storePassword 'android@123'
+            keyAlias 'tg 9 fm radio'
+            keyPassword 'android@123'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.mySignature
+        }
+    }
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.google.android.exoplayer:exoplayer:r1.5.6'
+//    compile 'com.google.android.gms:play-services-ads:8.4.0'
+}
